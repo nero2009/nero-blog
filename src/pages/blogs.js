@@ -9,7 +9,7 @@ const RecentBlogPost =({node})=>{
     return(
       <div key={node.id}>
         <Link 
-          to={node.slug}
+          to={`/${node.slug}`}
           css={{textDecoration: `none`, color: `inherit`}}
         >
           <g.H3 marginBottom={rhythm(1 / 4)}>
