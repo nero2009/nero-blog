@@ -4,16 +4,15 @@ import g from 'glamorous'
 import './index.css'
 import moment from 'moment'
 
-import { rhythm } from "../utils/typography";
 
 const RecentBlogPost =({node})=>{
   return(
     <div key={node.id}>
       <Link 
         to={node.slug}
-        css={{textDecoration: `none`, color: `inherit`}}
+        
       >
-        <g.H3 marginBottom={rhythm(1 / 4)}>
+        <g.H3 marginBottom="10px">
             {node.title}{" "}
             
         </g.H3>
@@ -24,18 +23,20 @@ const RecentBlogPost =({node})=>{
   )
 }
 const IndexPage = ({data}) => (
-  <div> 
+  <div className="index-page"> 
     <div className="intro">
       <img src="/static/home.jpg" alt="home" css={{height:`400`, width:`700`,display:`block`, margin:`auto`, marginBottom:`30px`}}/>
       <h3>😎👋</h3>
-      <p>I am Nero Adaware, I am a Full Stack Developer that specializes in React and Node Js.  <Link to="/portfolio/">More on</Link></p>
+      <p>I am Nero, a Full Stack Developer that specializes in Javascript, React and Node Js. I am an avid learner 
+        and I'm passionate about technology. Technology can impact lives and that is something that drives my passion for technology.
+      </p>
     </div>
     <div css={{borderBottom:`2px solid grey`, position:`relative`, width:`800px`,marginBottom:`20px`}}></div>
     <h3>Recent Posts</h3>
-    <div>
+    <div className="recent">
        
         <ul>
-            {data.allContentfulBlogpost.edges.map((edge)=> <RecentBlogPost node={edge.node}/>)}
+            {data.allContentfulBlogpost.edges.slice(1,2).map((edge)=> <RecentBlogPost node={edge.node}/>)}
         </ul>
         
     </div>

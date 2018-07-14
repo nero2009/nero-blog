@@ -6,12 +6,7 @@ module.exports = {
   `gatsby-transformer-remark`,
   `gatsby-plugin-glamor`,
   `gatsby-plugin-styled-components`,
-  {
-    resolve: `gatsby-plugin-typography`,
-    options: {
-      pathToConfigModule: `src/utils/typography`,
-    },
-  },
+  
   {
     resolve: `gatsby-source-contentful`,
     options: {
