@@ -96,6 +96,16 @@ export const Line =styled.div`
     border-bottom:1px solid grey;
     position:relative;
 `
+export const AboutContainer= styled.div`
+    display: flex;
+`
 
+export const AboutTextSection = styled.div`
+    flex: 2;
+`
+
+export const AboutImageSection = styled.div`
+    flex: 1;
+`
 
 
