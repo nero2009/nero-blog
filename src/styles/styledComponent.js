@@ -1,8 +1,17 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, injectGlobal } from "styled-components";
 import * as glamor from "glamor";
 import glamorous from "glamorous";
 import Link from "gatsby-link";
+
+injectGlobal`
+    @import url('https://fonts.googleapis.com/css?family=Oxygen:700|Rajdhani:500');
+    body{
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+    
+`
 
 const anchorUnderline = keyframes`
     0%,10%{
@@ -47,6 +56,7 @@ export const StyledLink = styled(Link)`
     transition: color .4s ease-out;
     margin-left: 2em;
     font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
     &:after{
         border-radius: 1em;
         border-top: .1em solid #2F56B0;
@@ -73,11 +83,14 @@ export const HomeLink = styled.h3`
     margin-bottom:20px;
     display:inline-block;
     fontStyle:normal;
+    font-family: 'Rajdhani', sans-serif;
+    color:#5384ac;
     &:hover{
         animation: ${shake} 0.82s cubic-bezier(.36,.07,.19,.97) both;
         transform: translate3d(0, 0, 0);
         backface-visibility: hidden;
         perspective: 1000px;
+        color: #768983;
     }
 `
 
@@ -106,6 +119,26 @@ export const AboutTextSection = styled.div`
 
 export const AboutImageSection = styled.div`
     flex: 1;
+`
+export const H2 = styled.h2`
+    font-family: 'Rajdhani', sans-serif;
+
+`
+
+export const H4 = styled.h4`
+    font-family: 'Rajdhani', sans-serif;
+`
+
+export const H6 = styled.h6`
+    font-family: 'Rajdhani', sans-serif;
+`
+export const H3 = styled.h3`
+    font-family: 'Rajdhani', sans-serif;
+`
+
+export const BlogLink =styled(Link)`
+    text-decoration:none;
+    font-family: 'Rajdhani', sans-serif;
 `
 
 

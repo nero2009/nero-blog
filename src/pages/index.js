@@ -3,22 +3,22 @@ import Link from 'gatsby-link'
 import g from 'glamorous'
 import './index.css'
 import moment from 'moment'
-
+import {H3, BlogLink, H4} from '../styles/styledComponent'
 
 const RecentBlogPost =({node})=>{
   return(
     <div key={node.id}>
-      <Link 
+      <BlogLink 
         to={node.slug}
         
       >
-        <g.H3 marginBottom="10px">
+        <H3>
             {node.title}{" "}
-            
-        </g.H3>
-        <g.H4 css={{color:"#BBB", marginTop:"15px"}}>{moment(node.createdat).format("MMMM Do YYYY")}</g.H4>
+        </H3>
+        <H4>{moment(node.createdat).format("MMMM Do YYYY")}</H4>
 
-      </Link>
+      </BlogLink>
+      
     </div>
   )
 }
@@ -30,9 +30,11 @@ const IndexPage = ({data}) => (
       <p>I am Nero, a Full Stack Developer that specializes in Javascript, React and Node Js. I am an avid learner 
         and I'm passionate about technology. Technology can impact lives and that is something that drives my passion for technology.
       </p>
+      <br/>
+      <p>Tech is Awesome.</p>
     </div>
     <div css={{borderBottom:`2px solid grey`, position:`relative`, width:`800px`,marginBottom:`20px`}}></div>
-    <h3>Recent Posts</h3>
+    <H3>Recent Posts</H3>
     <div className="recent">
        
         <ul>
@@ -40,6 +42,7 @@ const IndexPage = ({data}) => (
         </ul>
         
     </div>
+    
   </div>
 )
 

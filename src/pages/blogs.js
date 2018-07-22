@@ -1,27 +1,26 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import g from 'glamorous'
+
 import './index.css'
 import moment from 'moment'
-import { rhythm } from "../utils/typography";
+import {H3, BlogLink, H4} from '../styles/styledComponent'
 
 const RecentBlogPost =({node})=>{
     return(
       <div key={node.id}>
-        <Link 
+        <BlogLink 
           to={`/${node.slug}`}
-          css={{textDecoration: `none`, color: `inherit`}}
+          
         >
-          <g.H3 marginBottom={rhythm(1 / 4)}>
+          <H3 >
               {node.title}{" "}
               
-          </g.H3>
-          <g.H4 css={{color:"#BBB", marginTop:"15px"}}>{moment(node.createdat).format("MMMM Do YYYY")}</g.H4>
+          </H3>
+          <H4 >{moment(node.createdat).format("MMMM Do YYYY")}</H4>
           <p>
             {node.content.childMarkdownRemark.excerpt}
           </p>
   
-        </Link>
+        </BlogLink>
       </div>
     )
   }
