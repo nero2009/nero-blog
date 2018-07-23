@@ -22,7 +22,7 @@ class Profile extends Component {
                     <p>Yeah before I forget I love Manchester United.</p>
                 </AboutTextSection>
                 <AboutImageSection>
-                    <img src="/static/me.jpg" alt="nero"/>
+                    <img src="/me.jpg" alt="nero"/>
                 </AboutImageSection>
             </AboutContainer>
             <Line/>

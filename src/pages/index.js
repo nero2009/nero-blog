@@ -25,7 +25,7 @@ const RecentBlogPost =({node})=>{
 const IndexPage = ({data}) => (
   <div className="index-page"> 
     <div className="intro">
-      <img src="/static/home.jpg" alt="home" css={{height:`400`, width:`700`,display:`block`, margin:`auto`, marginBottom:`30px`}}/>
+      <img src="/home.jpg" alt="home" css={{height:`400`, width:`700`,display:`block`, margin:`auto`, marginBottom:`30px`}}/>
       <h3>😎👋</h3>
       <p>I am Nero, a Full Stack Developer that specializes in Javascript, React and Node Js. I am an avid learner 
         and I'm passionate about technology. Technology can impact lives and that is something that drives my passion for technology.
