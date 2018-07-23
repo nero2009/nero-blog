@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { AboutContainer, AboutTextSection, AboutImageSection, Line, H2, H4, H6  } from "../styles/styledComponent";
+import Me from '../../static/Me.jpg'
 
 class Profile extends Component {
     render () {
@@ -22,7 +23,7 @@ class Profile extends Component {
                     <p>Yeah before I forget I love Manchester United.</p>
                 </AboutTextSection>
                 <AboutImageSection>
-                    <img src="/me.jpg" alt="nero"/>
+                    <img src={Me} alt="nero"/>
                 </AboutImageSection>
             </AboutContainer>
             <Line/>
