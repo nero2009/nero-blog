@@ -12,6 +12,7 @@ export default ({ children ,data}) => (
   >
   <Helmet>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <title>Nero</title>
   </Helmet>
     <Link to={`/`}>
       <HomeLink>
