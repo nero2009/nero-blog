@@ -2,7 +2,7 @@ import React from 'react'
 
 import './index.css'
 import moment from 'moment'
-import {H3, BlogLink, H4} from '../styles/styledComponent'
+import {H3, BlogLink, Excerpt, Date, BlogHeader} from '../styles/styledComponent'
 
 const RecentBlogPost =({node})=>{
     return(
@@ -11,14 +11,14 @@ const RecentBlogPost =({node})=>{
           to={`/${node.slug}`}
           
         >
-          <H3 >
+          <BlogHeader >
               {node.title}{" "}
               
-          </H3>
-          <H4 >{moment(node.createdat).format("MMMM Do YYYY")}</H4>
-          <p>
+          </BlogHeader>
+          <Date >{moment(node.createdat).format("MMMM Do YYYY")}</Date>
+          <Excerpt>
             {node.content.childMarkdownRemark.excerpt}
-          </p>
+          </Excerpt>
   
         </BlogLink>
       </div>

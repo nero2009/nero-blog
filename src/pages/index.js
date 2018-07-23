@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import g from 'glamorous'
 import './index.css'
 import moment from 'moment'
-import {H3, BlogLink, H4} from '../styles/styledComponent'
+import {H3, BlogLink, H4, Date, BlogHeader} from '../styles/styledComponent'
 
 const RecentBlogPost =({node})=>{
   return(
@@ -12,10 +12,10 @@ const RecentBlogPost =({node})=>{
         to={node.slug}
         
       >
-        <H3>
+        <BlogHeader>
             {node.title}{" "}
-        </H3>
-        <H4>{moment(node.createdat).format("MMMM Do YYYY")}</H4>
+        </BlogHeader>
+        <Date>{moment(node.createdat).format("MMMM Do YYYY")}</Date>
 
       </BlogLink>
       
@@ -38,7 +38,7 @@ const IndexPage = ({data}) => (
     <div className="recent">
        
         <ul>
-            {data.allContentfulBlogpost.edges.slice(1,2).map((edge)=> <RecentBlogPost node={edge.node}/>)}
+            {data.allContentfulBlogpost.edges.slice(0,2).map((edge)=> <RecentBlogPost node={edge.node}/>)}
         </ul>
         
     </div>
@@ -52,7 +52,9 @@ export const pageQuery = graphql`
    query pageQuery{
      allContentfulBlogpost (filter:{
        node_locale:{eq: "en-US"}
-     }){
+     },
+     sort:{ fields:[createdat], order: DESC}
+    ){
        edges{
          node{
            title

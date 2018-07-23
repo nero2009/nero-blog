@@ -5,7 +5,7 @@ import glamorous from "glamorous";
 import Link from "gatsby-link";
 
 injectGlobal`
-    @import url('https://fonts.googleapis.com/css?family=Oxygen:700|Rajdhani:500');
+    @import url('https://fonts.googleapis.com/css?family=Poor+Story|Rajdhani');
     body{
         font-family: 'Rajdhani', sans-serif;
     }
@@ -120,6 +120,11 @@ export const AboutTextSection = styled.div`
 export const AboutImageSection = styled.div`
     flex: 1;
 `
+export const H1 = styled.h1`
+    font-family: 'Rajdhani', sans-serif;
+
+`
+
 export const H2 = styled.h2`
     font-family: 'Rajdhani', sans-serif;
 
@@ -134,11 +139,34 @@ export const H6 = styled.h6`
 `
 export const H3 = styled.h3`
     font-family: 'Rajdhani', sans-serif;
+    color:hsla(0, 0%, 0%, .8);
+    
 `
 
 export const BlogLink =styled(Link)`
     text-decoration:none;
     font-family: 'Rajdhani', sans-serif;
 `
+export const FooterDiv =styled.div`
+    
+    padding-top:10px;
+`
 
+export const Date = styled.h6`
+    font-family: 'Poor Story', cursive;
+    margin-top: -25px;
+    color:hsla(0, 0%, 0%, .8);
+    font-weight: normal;
+`
 
+export const Excerpt = styled.p`
+    color:hsla(0, 0%, 0%, .8);
+`
+
+export const BlogHeader = styled.h3`
+    font-family: 'Rajdhani', sans-serif;
+    color:hsla(0, 0%, 0%, .8);
+    &:hover{
+        color:#2F56B0;
+    }
+`
