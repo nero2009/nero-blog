@@ -5,6 +5,8 @@ import './index.css'
 import moment from 'moment'
 import {H3, BlogLink, H4, Date, BlogHeader} from '../styles/styledComponent'
 import Home from '../../static/home.jpg'
+import PageTransition from 'gatsby-plugin-page-transitions';
+
 
 const RecentBlogPost =({node})=>{
   return(
@@ -24,9 +26,11 @@ const RecentBlogPost =({node})=>{
   )
 }
 const IndexPage = ({data}) => (
-  <div className="index-page"> 
+  <div className="index-page">
+    <PageTransition>
+    
     <div className="intro">
-      <img src={Home} alt="home" css={{height:`400`, width:`700`,display:`block`, margin:`auto`, marginBottom:`30px`}}/>
+      <img src={Home} alt="home"/>
       <h3>😎👋</h3>
       <p>I am Nero, a Full Stack Developer that specializes in Javascript, React and Node Js. I am an avid learner 
         and I'm passionate about technology. Technology can impact lives and that is something that drives my passion for technology.
@@ -34,12 +38,13 @@ const IndexPage = ({data}) => (
       <br/>
       <p>Tech is Awesome.</p>
     </div>
-    <div css={{borderBottom:`2px solid grey`, position:`relative`, width:`800px`,marginBottom:`20px`}}></div>
+    </PageTransition> 
+    <div ></div>
     <H3>Recent Posts</H3>
     <div className="recent">
        
         <ul>
-            {data.allContentfulBlogpost.edges.slice(0,2).map((edge)=> <RecentBlogPost node={edge.node}/>)}
+            {data.allContentfulBlogpost.edges.slice(0,2).map((edge,index)=> <RecentBlogPost key={index} node={edge.node}/>)}
         </ul>
         
     </div>

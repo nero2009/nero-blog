@@ -29,7 +29,7 @@ const Blogs = ({data}) => {
     return (
         <div>
             <ul>
-                {data.allContentfulBlogpost.edges.map((edge)=> <RecentBlogPost node={edge.node}/>)}
+                {data.allContentfulBlogpost.edges.map((edge, index)=> <RecentBlogPost node={edge.node} key={index}/>)}
            </ul>
         </div>
     )

@@ -94,7 +94,7 @@ export const HomeLink = styled.h3`
     }
 `
 
-export const Container = styled.div`
+export const CustomContainer = styled.div`
     margin: 0 auto;
     max-width: 800px;
     padding-bottom: 0px;
@@ -105,7 +105,7 @@ export const Container = styled.div`
 export const Line =styled.div`
     margin-bottom:20px;
     margin-top:5px;
-    width:800px;
+    max-width:800px;
     border-bottom:1px solid grey;
     position:relative;
 `

@@ -2,9 +2,15 @@ module.exports = {
   siteMetadata: {
     title: 'Nero Blog',
   },
-  plugins: ['gatsby-plugin-react-helmet',
+  plugins: [
+  'gatsby-plugin-react-helmet',
   `gatsby-transformer-remark`,
-  
+  {
+    resolve: 'gatsby-plugin-page-transitions',
+    options: {
+      transitionTime: 500
+    }
+  },
   `gatsby-plugin-styled-components`,
   
   {

@@ -2,13 +2,17 @@ import React from "react";
 import Link from "gatsby-link";
 import './index.css'
 import './icons.css'
-import {Container, StyledLink,HomeLink,Line, FooterDiv} from '../styles/styledComponent'
+import {CustomContainer, StyledLink,HomeLink,Line, FooterDiv} from '../styles/styledComponent'
 import {Helmet} from 'react-helmet'
 
 
 
+
 export default ({ children ,data}) => (
-  <Container
+ 
+
+  
+  <CustomContainer
   >
   <Helmet>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -26,7 +30,9 @@ export default ({ children ,data}) => (
       Blog
     </StyledLink>
     <Line/>
+    
     {children()}
+    
     <Line/>
     <footer>
       <div className="wrapper">
@@ -43,7 +49,8 @@ export default ({ children ,data}) => (
       </FooterDiv>
       
     </footer>
-  </Container>
+  </CustomContainer>
+ 
 );
 
 export const query = graphql`
