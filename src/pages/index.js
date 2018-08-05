@@ -25,6 +25,14 @@ const RecentBlogPost =({node})=>{
     </div>
   )
 }
+const post =()=>{
+  return(
+    <ul>
+            {data.allContentfulBlogpost.edges.slice(0,2).map((edge,index)=> <RecentBlogPost key={index} node={edge.node}/>)}
+        </ul>
+  )
+}
+
 const IndexPage = ({data}) => (
   <div className="index-page">
     <PageTransition>
@@ -42,10 +50,10 @@ const IndexPage = ({data}) => (
     <div ></div>
     <H3>Recent Posts</H3>
     <div className="recent">
+
+        <h2>No Posts</h2>
        
-        <ul>
-            {data.allContentfulBlogpost.edges.slice(0,2).map((edge,index)=> <RecentBlogPost key={index} node={edge.node}/>)}
-        </ul>
+       
         
     </div>
     

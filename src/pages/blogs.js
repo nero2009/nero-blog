@@ -28,9 +28,7 @@ const RecentBlogPost =({node})=>{
 const Blogs = ({data}) => {
     return (
         <div>
-            <ul>
-                {data.allContentfulBlogpost.edges.map((edge, index)=> <RecentBlogPost node={edge.node} key={index}/>)}
-           </ul>
+           <h2>No Posts</h2>
         </div>
     )
 }
