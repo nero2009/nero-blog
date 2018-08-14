@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes, injectGlobal } from "styled-components";
-import * as glamor from "glamor";
-import glamorous from "glamorous";
+
 import Link from "gatsby-link";
 
 injectGlobal`

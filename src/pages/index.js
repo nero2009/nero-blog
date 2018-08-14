@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import g from 'glamorous'
 import './index.css'
 import moment from 'moment'
 import {H3, BlogLink, H4, Date, BlogHeader} from '../styles/styledComponent'
