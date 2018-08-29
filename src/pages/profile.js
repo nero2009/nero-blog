@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { AboutContainer, AboutTextSection, AboutImageSection, Line, H2, H4, H6  } from "../styles/styledComponent";
-import Me from '../../static/Me.jpg'
+import Img from 'gatsby-image'
 
-class Profile extends Component {
-    render () {
+const Profile =({data})=> {
+    
         return (
             <div>
             <AboutContainer>
                 <AboutTextSection>
                     <H2>about me</H2>
-                    <p>Nero Adaware is a front-end developer based in Lagos, Nigeria</p>
+                    <p>Nero Adaware is a fullstack developer based in Lagos, Nigeria</p>
                     <p>
                         I love taking complex problems and turn them into simple & interactive designs. I also
                         love the logic and structure of coding and always thrive to write efficient code, whether it be
@@ -23,7 +23,7 @@ class Profile extends Component {
                     <p>Yeah before I forget I love Manchester United.</p>
                 </AboutTextSection>
                 <AboutImageSection>
-                    <img src={Me} alt="nero"/>
+                    <Img sizes={data.profileImage.childImageSharp.sizes} alt="nero"/>
                 </AboutImageSection>
             </AboutContainer>
             <Line/>
@@ -40,7 +40,20 @@ class Profile extends Component {
                 <p>Graduated with a Second Class Upper in Computer Engineering</p>
             </div>
         )
-    }
+    
 }
 
 export default Profile
+
+export const pageQuery = graphql`
+   query imageQuery{
+    
+     profileImage: file(relativePath:{regex: "/nero/"}){
+    	childImageSharp{
+        sizes(maxWidth:250){
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+   }
+`
