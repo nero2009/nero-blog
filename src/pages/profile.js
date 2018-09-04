@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutContainer, AboutTextSection, AboutImageSection, Line, H2, H4, H6  } from "../styles/styledComponent";
+import { AboutContainer, AboutTextSection, AboutImageSection, Line, H2, H4, H5  } from "../styles/styledComponent";
 import Img from 'gatsby-image'
 
 const Profile =({data})=> {
@@ -36,7 +36,7 @@ const Profile =({data})=> {
               
             <Line/>
             <H4>Education</H4>
-                <H6>Covenant University (2010-2015)</H6>
+                <H5>Covenant University (2010-2015)</H5>
                 <p>Graduated with a Second Class Upper in Computer Engineering</p>
             </div>
         )

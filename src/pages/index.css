@@ -16,3 +16,23 @@ hr{
 .index-page{
     padding-bottom: 20px;
 }
+
+.bookmark-link{
+    text-decoration: underline;
+    text-underline-position: under;
+    color: #222;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bookmark-link:hover{
+    text-decoration: none;
+}
+
+.bookmark-subhead{
+    color:grey
+}
+
+.bookmark-header{
+    text-align: center
+}
+

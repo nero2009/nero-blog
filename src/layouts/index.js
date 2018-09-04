@@ -23,12 +23,16 @@ export default ({ children ,data}) => (
         {`<Nero/>`}
       </HomeLink>
     </Link>
-    <StyledLink  to={`/profile/`}>
-      Profile
-    </StyledLink>
-    <StyledLink to={`/blogs/`}>
+    <StyledLink to={`/bookmarks/`}>
+      Bookmarks
+    </StyledLink> 
+    <StyledLink  to={`/blogs/`}>
       Blog
     </StyledLink>
+    <StyledLink to={`/profile/`}>
+      Profile
+    </StyledLink>
+   
     <Line/>
     
     {children()}

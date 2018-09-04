@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "nero-blog",
+  "description": "Nero personal blog",
   "version": "1.0.0",
   "author": "Nero",
   "dependencies": {

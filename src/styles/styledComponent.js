@@ -132,6 +132,9 @@ export const H2 = styled.h2`
 export const H4 = styled.h4`
     font-family: 'Rajdhani', sans-serif;
 `
+export const H5 = styled.h5`
+    font-family: 'Rajdhani', sans-serif;
+`
 
 export const H6 = styled.h6`
     font-family: 'Rajdhani', sans-serif;
