@@ -4,7 +4,7 @@ import styled, { keyframes, injectGlobal } from "styled-components";
 import Link from "gatsby-link";
 
 injectGlobal`
-    @import url('https://fonts.googleapis.com/css?family=Poor+Story|Rajdhani');
+    @import url('https://fonts.googleapis.com/css?family=Poor+Story|Rajdhani:500');
     body{
         font-family: 'Rajdhani', sans-serif;
     }
