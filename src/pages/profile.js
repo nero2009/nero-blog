@@ -29,9 +29,21 @@ const Profile =({data})=> {
             <Line/>
             <H4>Projects</H4>
             <ul>
-                <li><a href="https://expenses-managers.herokuapp.com/" target="_blank">Expense Manager using React, Redux, Firebase and Enzyme.</a> <a href="https://github.com/nero2009/expense-manager" style={{textDecoration:"underline", color:"grey", fontStyle:"italic", fontWeight:"bold"}}>Source</a></li>
-                <li><a href="https://marvelous-mount-rainier-44182.herokuapp.com" target="_blank">Pixabay Image Viewer using React, Redux, Pixabay API and Redux-sagas for handling side effects.</a> <a href="https://github.com/nero2009/nero-blog" style={{textDecoration:"underline", color:"grey", fontStyle:"italic", fontWeight:"bold"}}>Source</a></li>
-                <li><a href="http://neroblog.herokuapp.com/" target="_blank">Sports Blog using Node JS, MongoDb,Express-validator and Pug template engine.</a></li>
+                <li>
+                    <a href="https://expenses-managers.herokuapp.com/" target="_blank">Expense Manager using React, Redux, Firebase and Enzyme.</a> 
+                    <a href="https://github.com/nero2009/expense-manager" target="_blank" style={{textDecoration:"underline", color:"grey", fontStyle:"italic", fontWeight:"bold"}}>Source</a>
+                </li>
+                <li>
+                    <a href="https://marvelous-mount-rainier-44182.herokuapp.com" target="_blank">Pixabay Image Viewer using React, Redux, Pixabay API and Redux-sagas for handling side effects.</a> 
+                    <a href="https://github.com/nero2009/Image-viewer" target="_blank" style={{textDecoration:"underline", color:"grey", fontStyle:"italic", fontWeight:"bold"}}>Source</a>
+                </li>
+                <li>
+                    <a href="http://neroblog.herokuapp.com/" target="_blank">Sports Blog using Node JS, MongoDb,Express-validator and Pug template engine.</a>
+                    <a href="https://github.com/nero2009/sports-blog" target="_blank" style={{textDecoration:"underline", color:"grey", fontStyle:"italic", fontWeight:"bold"}}>Source</a>
+                </li>
+                <li><a href="https://nero-adaware.netlify.com">Portfolio and Blog Site built with Gatsby, Graphql and Contentful</a>
+                <a href="https://github.com/nero2009/nero-blog" target="_blank" style={{textDecoration:"underline", color:"grey", fontStyle:"italic", fontWeight:"bold"}}>Source</a>
+                </li>
             </ul>
               
             <Line/>
