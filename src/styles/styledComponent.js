@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { keyframes, injectGlobal } from "styled-components";
 
 import Link from "gatsby-link";
@@ -170,5 +169,33 @@ export const BlogHeader = styled.h3`
     color:hsla(0, 0%, 0%, .8);
     &:hover{
         color:#2F56B0;
+    }
+`
+export const BookmarkLink = styled.a`
+    text-decoration: underline;
+    text-underline-position: under;
+    color: #222;
+    font-family: 'Times New Roman', Times, serif;
+
+    &:hover{
+        text-decoration: none;
+    }
+`
+
+export const BookmarkHeader = styled.header`
+    text-align: center;
+`
+
+export const BookmarkSubHeader = styled.h3`
+    color:grey;
+`
+
+export const SourceLink = styled.a`
+    text-decoration: underline;
+    color: grey;
+    font-style: italic;
+    font-weight: bold;
+    &:hover{
+        text-decoration: none;
     }
 `

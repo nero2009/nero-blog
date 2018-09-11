@@ -1,6 +1,5 @@
 import React from 'react'
 
-import './index.css'
 import moment from 'moment'
 import {H3, BlogLink, Excerpt, Date, BlogHeader} from '../styles/styledComponent'
 

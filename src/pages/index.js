@@ -1,5 +1,4 @@
 import React from 'react'
-import './index.css'
 import Img from 'gatsby-image'
 import moment from 'moment'
 import {H3, BlogLink, H4, Date, BlogHeader} from '../styles/styledComponent'

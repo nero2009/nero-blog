@@ -1,16 +1,17 @@
 import React from 'react'
 import moment from 'moment'
+import {BookmarkLink, BookmarkHeader, BookmarkSubHeader} from '../styles/styledComponent'
 
 const Bookmarks = ({data}) => {
     return (
         <div>
-            <header className="bookmark-header" >
+            <BookmarkHeader  >
                 <h1>Bookmarks</h1>
-                <h3 className="bookmark-subhead">Random links that might be useful to you, me and future me </h3>
-            </header>
-            
-                {data.allContentfulLinks.edges.map(edge => <BookmarkList key={edge.node.id} node={edge.node}/>) }
-            
+                <BookmarkSubHeader>Random links that might be useful to you, me and future me </BookmarkSubHeader>
+            </BookmarkHeader>
+                {
+                    data.allContentfulLinks.edges.map(edge => <BookmarkList key={edge.node.id} node={edge.node}/>)
+                }
         </div>
     )
 }
@@ -20,7 +21,7 @@ const BookmarkList =({node})=>{
         <div>
             <article>
                 <p>
-                    <span>{moment(node.date).format("Do MMM YYYY")}</span> <span className="underline"><a className="bookmark-link" href={node.link.url} target="_blank">{node.link.title}</a></span>
+                    <span>{moment(node.date).format("Do MMM YYYY")}</span> <span>< BookmarkLink href={node.link.url} target="_blank">{node.link.title}</BookmarkLink></span>
                 </p>
             </article>
         </div>
