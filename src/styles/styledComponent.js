@@ -98,6 +98,7 @@ export const CustomContainer = styled.div`
     padding-bottom: 0px;
     padding-top: 20px;
     margin-bottom: -20px;
+    border-top: 6px solid #5384ac;
 `
 
 export const Line =styled.div`
@@ -199,3 +200,10 @@ export const SourceLink = styled.a`
         text-decoration: none;
     }
 `
+
+export const BlueLine = styled.div`
+    max-width:800px;
+    border-bottom:1px solid #2F56B0;
+    
+`
+

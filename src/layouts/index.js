@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import './index.css'
 import './icons.css'
-import {CustomContainer, StyledLink,HomeLink,Line, FooterDiv} from '../styles/styledComponent'
+import {CustomContainer, StyledLink,HomeLink,Line, FooterDiv, BlueLine} from '../styles/styledComponent'
 import {Helmet} from 'react-helmet'
 
 
@@ -18,6 +18,7 @@ export default ({ children ,data}) => (
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <title>Nero</title>
   </Helmet>
+    
     <Link to={`/`}>
       <HomeLink>
         {`<Nero/>`}
