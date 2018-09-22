@@ -1,6 +1,9 @@
 import React from 'react'
-
 import moment from 'moment'
+import {graphql} from 'gatsby'
+
+//components
+import Layout from '../components/layouts'
 import {H3, BlogLink, Excerpt, Date, BlogHeader} from '../styles/styledComponent'
 
 const RecentBlogPost =({node})=>{
@@ -25,10 +28,13 @@ const RecentBlogPost =({node})=>{
   }
 
 const Blogs = ({data}) => {
+    
     return (
+      <Layout>
         <div>
            <h2>No Posts</h2>
         </div>
+      </Layout>
     )
 }
 

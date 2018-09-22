@@ -1,10 +1,15 @@
 import React from 'react'
+import {graphql} from 'gatsby'
 import { AboutContainer, AboutTextSection, AboutImageSection, Line, H2, H4, H5, SourceLink  } from "../styles/styledComponent";
 import Img from 'gatsby-image'
 
+import Layout from '../components/layouts'
+
 const Profile =({data})=> {
+        console.log(data)
     
         return (
+            <Layout>
             <div>
             <AboutContainer>
                 <AboutTextSection>
@@ -23,7 +28,7 @@ const Profile =({data})=> {
                     <p>Yeah before I forget I love Manchester United.</p>
                 </AboutTextSection>
                 <AboutImageSection>
-                    <Img sizes={data.profileImage.childImageSharp.sizes} alt="nero"/>
+                    <Img fluid={data.profileImage.childImageSharp.fluid} alt="nero"/>
                 </AboutImageSection>
             </AboutContainer>
             <Line/>
@@ -52,6 +57,7 @@ const Profile =({data})=> {
                 <H5>Covenant University (2010-2015)</H5>
                 <p>Graduated with a Second Class Upper in Computer Engineering</p>
             </div>
+            </Layout>
         )
     
 }
@@ -59,12 +65,12 @@ const Profile =({data})=> {
 export default Profile
 
 export const pageQuery = graphql`
-   query imageQuery{
+   query {
     
      profileImage: file(relativePath:{regex: "/nero/"}){
     	childImageSharp{
-        sizes(maxWidth:250){
-          ...GatsbyImageSharpSizes
+        fluid(maxWidth:250){
+          ...GatsbyImageSharpFluid
         }
       }
     }

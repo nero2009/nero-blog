@@ -1,8 +1,9 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import moment from 'moment'
-import {H3, BlogLink, H4, Date, BlogHeader} from '../styles/styledComponent'
-import PageTransition from 'gatsby-plugin-page-transitions';
+import {graphql} from 'gatsby'
+import Layout from '../components/layouts'
+import {H3, BlogLink, Date, BlogHeader} from '../styles/styledComponent'
 
 
 const RecentBlogPost =({node})=>{
@@ -23,33 +24,34 @@ const RecentBlogPost =({node})=>{
     </div>
   )
 }
-const post =()=>{
+// const post =()=>{
   
-  return(
-    <ul>
-            {data.allContentfulBlogpost.edges.slice(0,2).map((edge,index)=> <RecentBlogPost key={index} node={edge.node}/>)}
-        </ul>
-  )
-}
+//   return(
+//     <ul>
+//             {data.allContentfulBlogpost.edges.slice(0,2).map((edge,index)=> <RecentBlogPost key={index} node={edge.node}/>)}
+//         </ul>
+//   )
+// }
 
 const IndexPage = ({data}) => (
+  <Layout>
   <div className="index-page">
-    <PageTransition>
+   
     
     <div className="intro">
       <Img 
-        sizes={data.homeImage.childImageSharp.sizes} 
+        fluid={data.homeImage.childImageSharp.fluid} 
         alt="home"
         style={{marginBottom: "10px"}}
       />
-      <h3>😎👋</h3>
+      <span role="img">😎👋</span>
       <p>I am Nero, a Full Stack Developer that specializes in Javascript, React and Node Js. I am an avid learner 
         and I'm passionate about technology. Technology can impact lives and that is something that drives my passion for technology.
       </p>
       <br/>
       <p>Tech is Awesome.</p>
     </div>
-    </PageTransition> 
+    
     <div ></div>
     <H3>Recent Posts</H3>
     <div className="recent">
@@ -61,12 +63,13 @@ const IndexPage = ({data}) => (
     </div>
     
   </div>
+  </Layout>
 )
 
 export default IndexPage
 
 export const pageQuery = graphql`
-   query pageQuery{
+   query {
      allContentfulBlogpost (filter:{
        node_locale:{eq: "en-US"}
      },
@@ -87,10 +90,11 @@ export const pageQuery = graphql`
      },
      homeImage: file(relativePath:{regex: "/home/"}){
     	childImageSharp{
-        sizes(maxWidth:800){
-          ...GatsbyImageSharpSizes
+        fluid(maxWidth:800){
+          ...GatsbyImageSharpFluid
         }
       }
     }
+    
    }
 `

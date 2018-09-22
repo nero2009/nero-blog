@@ -1,9 +1,14 @@
 import React from 'react'
 import moment from 'moment'
+import {graphql} from 'gatsby'
+
+//components
+import Layout from '../components/layouts'
 import {BookmarkLink, BookmarkHeader, BookmarkSubHeader} from '../styles/styledComponent'
 
 const Bookmarks = ({data}) => {
     return (
+        <Layout>
         <div>
             <BookmarkHeader  >
                 <h1>Bookmarks</h1>
@@ -13,6 +18,7 @@ const Bookmarks = ({data}) => {
                     data.allContentfulLinks.edges.map(edge => <BookmarkList key={edge.node.id} node={edge.node}/>)
                 }
         </div>
+        </Layout>
     )
 }
 

@@ -1,9 +1,11 @@
 const path = require('path')
+const _ = require('lodash')
 
-exports.createPages = ({graphql, boundActionCreators}) =>{
-    const {createPage} = boundActionCreators
+exports.createPages = ({graphql, actions}) =>{
+    const {createPage} = actions
     return new Promise((resolve, reject)=>{
         const blogPostTemplate = path.resolve('src/templates/blog-post.js')
+        const tagTemplate = path.resolve('src/templates/tags.js')
         resolve(
             graphql(`
                 {
@@ -12,6 +14,7 @@ exports.createPages = ({graphql, boundActionCreators}) =>{
                             node{
                                 id
                                 slug
+                                tags
                             }
                         }
                     }
@@ -20,12 +23,33 @@ exports.createPages = ({graphql, boundActionCreators}) =>{
                 if (result.errors){
                     reject(result.errors)
                 }
-                result.data.allContentfulBlogpost.edges.forEach((edge)=>{
+                const posts = result.data.allContentfulBlogpost.edges;
+
+                posts.forEach((edge)=>{
                     createPage ({
                         path:edge.node.slug,
                         component: blogPostTemplate,
                         context:{
                             slug:edge.node.slug
+                        }
+                    })
+                })
+
+                let tags =[];
+                _.each(posts, edge =>{
+                    if(_.get(edge, "node.tags")){
+                        tags = tags.concat(edge.node.tags)
+                    }
+                })
+
+                tags = _.uniq(tags)
+
+                tags.forEach(tag => {
+                    createPage({
+                        path: `/tags/${tag}`,
+                        component: tagTemplate,
+                        context:{
+                            tag
                         }
                     })
                 })

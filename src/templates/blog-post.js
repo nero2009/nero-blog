@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {graphql} from 'gatsby'
 import {H3,H1, H4} from '../styles/styledComponent'
 
 class BlogPost extends Component {

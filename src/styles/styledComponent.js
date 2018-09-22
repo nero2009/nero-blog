@@ -1,6 +1,6 @@
 import styled, { keyframes, injectGlobal } from "styled-components";
 
-import Link from "gatsby-link";
+import {Link} from 'gatsby';
 
 injectGlobal`
     @import url('https://fonts.googleapis.com/css?family=Poor+Story|Rajdhani:500');
