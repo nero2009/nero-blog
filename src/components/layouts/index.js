@@ -35,7 +35,7 @@ export default ({ children ,data}) => (
         </ul>
       </div>
       <FooterDiv>
-        <p>This Page is open source. <a className="source-link" target="_blank" rel="noopener noreferrer" href="https://github.com/nero2009/nero-blog">Source</a></p>
+        <p>This Page is open source. <a className="source-link" target="_blank" rel="noopener noreferrer" href="https://github.com/nero2009/nero-blog"><i class="fab fa-github"></i></a></p>
         <p>&copy; 2018 Nero Adaware </p>
       </FooterDiv>
       

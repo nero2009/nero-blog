@@ -98,7 +98,7 @@ export const ProjectList = styled.li`
     line-height: 1.5;
     margin-bottom:1rem;
     &:before{
-        
+        color:#5384ac;
         width:20px;
         height:20px;
         top:0;
@@ -151,6 +151,7 @@ export const H1 = styled.h1`
 `
 
 export const H2 = styled.h2`
+    color:#5384ac;
     font-family: 'Rajdhani', sans-serif;
 
 `
@@ -202,7 +203,7 @@ export const BookmarkLink = styled.a`
     text-decoration: underline;
     text-underline-position: under;
     color: #222;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rajdhani', sans-serif;
 
     &:hover{
         text-decoration: none;
@@ -211,24 +212,27 @@ export const BookmarkLink = styled.a`
 
 export const BookmarkHeader = styled.div`
     text-align: center;
+    font-family: 'Rajdhani', sans-serif;
 `
 
 export const BookmarkTitle = styled.h1`
     padding:0px;
     margin-bottom:10px;
+    font-family: 'Rajdhani', sans-serif;
 `
 
 export const BookmarkSubHeader = styled.h4`
     color:grey;
+    font-family: 'Rajdhani', sans-serif;
 `
 
 export const SourceLink = styled.a`
-    text-decoration: underline;
+    text-decoration: none;
     color: grey;
     font-style: italic;
     font-weight: bold;
     &:hover{
-        text-decoration: none;
+        color: #595959;
     }
 `
 

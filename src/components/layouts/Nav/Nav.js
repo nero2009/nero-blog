@@ -8,7 +8,7 @@ const Nav = () => {
         <div>
             <header>
                 <section>
-                <HomeLink to="/r" id="logo" target="_blank">Nero</HomeLink>
+                <HomeLink to="/" id="logo" target="_blank">Nero</HomeLink>
 
                 <label for="toggle-1" className="toggle-menu"><ul><li></li> <li></li> <li></li></ul></label>
                 <input type="checkbox" id="toggle-1"/>

@@ -25,11 +25,11 @@ const Bookmarks = ({data}) => {
 const BookmarkList =({node})=>{
     return(
         <div>
-            <article>
-                <p>
+            <ul>
+                <ProjectList>
                     <span>{moment(node.date).format("Do MMM YYYY")}</span> <span>< BookmarkLink href={node.link.url} target="_blank">{node.link.title}</BookmarkLink></span>
-                </p>
-            </article>
+                </ProjectList>
+            </ul>
         </div>
     )
 }
