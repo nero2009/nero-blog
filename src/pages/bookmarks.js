@@ -4,14 +4,14 @@ import {graphql} from 'gatsby'
 
 //components
 import Layout from '../components/layouts'
-import {BookmarkLink, BookmarkHeader, BookmarkSubHeader} from '../styles/styledComponent'
+import {BookmarkLink, BookmarkHeader, BookmarkSubHeader, BookmarkTitle, ProjectList} from '../styles/styledComponent'
 
 const Bookmarks = ({data}) => {
     return (
         <Layout>
         <div>
-            <BookmarkHeader  >
-                <h1>Bookmarks</h1>
+            <BookmarkHeader >
+                <BookmarkTitle>Bookmarks</BookmarkTitle>
                 <BookmarkSubHeader>Random links that might be useful to you, me and future me </BookmarkSubHeader>
             </BookmarkHeader>
                 {

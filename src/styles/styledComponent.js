@@ -92,9 +92,26 @@ export const HomeLink = styled(Link)`
     }
 `
 
+export const ProjectList = styled.li`
+    position: relative;
+    padding-left: 2rem;
+    line-height: 1.5;
+    margin-bottom:1rem;
+    &:before{
+        
+        width:20px;
+        height:20px;
+        top:0;
+        left:0;
+        position:absolute;
+        content: '\f058';
+        font-family: "FontAwesome";
+    }
+`
+
 export const CustomContainer = styled.div`
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
     padding-bottom: 0px;
     
     margin-bottom: -20px;
@@ -192,11 +209,16 @@ export const BookmarkLink = styled.a`
     }
 `
 
-export const BookmarkHeader = styled.header`
+export const BookmarkHeader = styled.div`
     text-align: center;
 `
 
-export const BookmarkSubHeader = styled.h3`
+export const BookmarkTitle = styled.h1`
+    padding:0px;
+    margin-bottom:10px;
+`
+
+export const BookmarkSubHeader = styled.h4`
     color:grey;
 `
 

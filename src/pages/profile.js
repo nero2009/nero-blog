@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import { AboutContainer, AboutTextSection, AboutImageSection, Line, H2, H4, H5, SourceLink  } from "../styles/styledComponent";
+import { AboutContainer, AboutTextSection, AboutImageSection, Line, H2, H4, H5, SourceLink, ProjectList  } from "../styles/styledComponent";
 import Img from 'gatsby-image'
 
 import Layout from '../components/layouts'
@@ -35,22 +35,22 @@ const Profile =({data})=> {
             <H4>Projects</H4>
             
             <ul>
-                <li>
+                <ProjectList>
                     <a href="https://expenses-managers.herokuapp.com/" target="_blank"  rel="noopener noreferrer" >Expense Manager using React, Redux, Firebase and Enzyme.</a> 
                     <SourceLink href="https://github.com/nero2009/expense-manager" target="_blank"  rel="noopener noreferrer">Source</SourceLink>
-                </li>
-                <li>
+                </ProjectList>
+                <ProjectList>
                     <a href="https://marvelous-mount-rainier-44182.herokuapp.com" target="_blank"  rel="noopener noreferrer">Pixabay Image Viewer using React, Redux, Pixabay API and Redux-sagas for handling side effects.</a> 
                     <SourceLink href="https://github.com/nero2009/Image-viewer" target="_blank" rel="noopener noreferrer">Source</SourceLink>
-                </li>
-                <li>
+                </ProjectList>
+                <ProjectList>
                     <a href="http://neroblog.herokuapp.com/" target="_blank"  rel="noopener noreferrer">Sports Blog using Node JS, MongoDb,Express-validator and Pug template engine.</a>
                     <SourceLink href="https://github.com/nero2009/sports-blog" target="_blank"  rel="noopener noreferrer">Source</SourceLink>
-                </li>
-                <li>
+                </ProjectList>
+                <ProjectList>
                     <a href="https://nero-adaware.netlify.com"  rel="noopener noreferrer">Portfolio and Blog Site built with Gatsby, Graphql and Contentful</a>
                     <SourceLink href="https://github.com/nero2009/nero-blog" target="_blank"  rel="noopener noreferrer">Source</SourceLink>
-                </li>
+                </ProjectList>
             </ul>
               
             <Line/>
