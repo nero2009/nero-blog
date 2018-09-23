@@ -77,10 +77,10 @@ export const StyledLink = styled(Link)`
 
 
 `
-export const HomeLink = styled.h3`
-    margin-bottom:20px;
+export const HomeLink = styled(Link)`
+    padding:20px 0px;
     display:inline-block;
-    fontStyle:normal;
+    fontStyle:24px;
     font-family: 'Rajdhani', sans-serif;
     color:#5384ac;
     &:hover{
@@ -96,7 +96,16 @@ export const CustomContainer = styled.div`
     margin: 0 auto;
     max-width: 800px;
     padding-bottom: 0px;
-    padding-top: 20px;
+    
+    margin-bottom: -20px;
+    
+`
+
+export const BodyContainer = styled.div`
+    margin: 0 auto;
+    max-width: auto;
+    padding-bottom: 0px;
+    
     margin-bottom: -20px;
     border-top: 6px solid #5384ac;
 `
