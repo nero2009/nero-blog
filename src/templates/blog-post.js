@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import {graphql} from 'gatsby'
-import {H3,H1, H4} from '../styles/styledComponent'
+
+import Layout from '../components/layouts'
+import {H3,H1, H4, BlogPostContainer, BodyContainer} from '../styles/styledComponent'
 
 class BlogPost extends Component {
     render () {
         const {title,author,content} = this.props.data.contentfulBlogpost
         return (
-            <div>
+            <BlogPostContainer>
                <H1>{title}</H1> 
                <H4>{author}</H4> 
                 <div dangerouslySetInnerHTML={{__html: content.childMarkdownRemark.html}}></div>       
-            </div>
+            </BlogPostContainer>
         )
     }
 }

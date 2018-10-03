@@ -2,8 +2,8 @@ import React from "react"
 import {graphql, Link} from 'gatsby'
 
 
-const Tags = ({pathContext, data}) =>{
-    const {tag} = pathContext;
+const Tags = ({pageContext, data}) =>{
+    const {tag} = pageContext;
     const {edges, totalCount} = data.allContentfulBlog;
     const tagHeader = `${totalCount} post${
         totalCount === 1 ? "" : "s"

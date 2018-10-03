@@ -113,7 +113,8 @@ export const CustomContainer = styled.div`
     margin: 0 auto;
     max-width: 900px;
     padding-bottom: 0px;
-    
+    padding-left:20px;
+    padding-right:20px;
     margin-bottom: -20px;
     
 `
@@ -135,15 +136,21 @@ export const Line =styled.div`
     position:relative;
 `
 export const AboutContainer= styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    
+
+  @media (max-width: 700px) {
+    grid-template-columns: 
+  }
 `
 
 export const AboutTextSection = styled.div`
-    flex: 2;
+    
 `
 
 export const AboutImageSection = styled.div`
-    flex: 1;
+    
 `
 export const H1 = styled.h1`
     font-family: 'Rajdhani', sans-serif;
@@ -171,10 +178,19 @@ export const H3 = styled.h3`
     color:hsla(0, 0%, 0%, .8);
     
 `
+export const BlogPostContainer = styled.div`
+    padding: 10px;
+    
+`
 
 export const BlogLink =styled(Link)`
     text-decoration:none;
     font-family: 'Rajdhani', sans-serif;
+    
+`
+export const Article = styled.article`
+    border-bottom: 1px solid #e6e5e6;
+    padding: 5px;
 `
 export const FooterDiv =styled.div`
     
@@ -183,9 +199,20 @@ export const FooterDiv =styled.div`
 
 export const Date = styled.h6`
     font-family: 'Poor Story', cursive;
-    margin-top: -25px;
     color:hsla(0, 0%, 0%, .8);
     font-weight: normal;
+    margin-bottom: 1rem;
+`
+export const Author = styled.h6`
+    margin-bottom: 1rem;
+    color: hsla(0, 0%, 0%, .8)
+`
+
+export const PostToolbar =styled.div`
+  display: grid;
+  grid-template-columns: 200px 150px ;
+  grid-gap:10px;
+  margin-top: 5px;
 `
 
 export const Excerpt = styled.p`
@@ -195,6 +222,7 @@ export const Excerpt = styled.p`
 export const BlogHeader = styled.h3`
     font-family: 'Rajdhani', sans-serif;
     color:hsla(0, 0%, 0%, .8);
+    margin-bottom: .5rem;
     &:hover{
         color:#2F56B0;
     }

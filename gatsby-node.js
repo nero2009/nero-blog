@@ -34,13 +34,16 @@ exports.createPages = ({graphql, actions}) =>{
                         }
                     })
                 })
-
+                
                 let tags =[];
                 _.each(posts, edge =>{
                     if(_.get(edge, "node.tags")){
                         tags = tags.concat(edge.node.tags)
+                        
                     }
                 })
+                console.log(tags)
+                
 
                 tags = _.uniq(tags)
 
