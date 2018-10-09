@@ -11,7 +11,7 @@ class BlogPost extends Component {
             <BlogPostContainer>
                <H1>{title}</H1> 
                <H4>{author}</H4> 
-                <div dangerouslySetInnerHTML={{__html: content.childMarkdownRemark.html}}></div>       
+                <div style={{padding:'0 20px 0 20px'}} dangerouslySetInnerHTML={{__html: content.childMarkdownRemark.html}}></div>       
             </BlogPostContainer>
         )
     }
