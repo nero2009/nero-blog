@@ -4,11 +4,11 @@ import {graphql} from 'gatsby'
 
 //components
 import Layout from '../components/layouts'
-import {H3, BlogLink, Excerpt, Date, BlogHeader} from '../styles/styledComponent'
+import {H3, BlogLink, Excerpt, Date, BlogHeader, Author, PostToolbar, Article} from '../styles/styledComponent'
 
 const RecentBlogPost =({node})=>{
     return(
-      <div key={node.id}>
+      <Article key={node.id}>
         <BlogLink 
           to={`/${node.slug}`}
           
@@ -17,13 +17,15 @@ const RecentBlogPost =({node})=>{
               {node.title}{" "}
               
           </BlogHeader>
-          <Date >{moment(node.createdat).format("MMMM Do YYYY")}</Date>
           <Excerpt>
             {node.content.childMarkdownRemark.excerpt}
           </Excerpt>
-  
+          <PostToolbar>
+            <Author>Post by {node.author}</Author>
+            <Date >{moment(node.createdat).format("MMMM Do YYYY")}</Date>
+          </PostToolbar>
         </BlogLink>
-      </div>
+      </Article>
     )
   }
 
@@ -32,7 +34,9 @@ const Blogs = ({data}) => {
     return (
       <Layout>
         <div>
-           <h2>No Posts</h2>
+          <ul>
+              {data.allContentfulBlogpost.edges.map((edge,index)=> <RecentBlogPost key={index} node={edge.node}/>)}
+          </ul>
         </div>
       </Layout>
     )
@@ -50,6 +54,7 @@ export const allpageQuery = graphql`
            title
            slug
            createdat
+           author
            content{
              childMarkdownRemark{
                excerpt

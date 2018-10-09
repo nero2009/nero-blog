@@ -77,10 +77,10 @@ export const StyledLink = styled(Link)`
 
 
 `
-export const HomeLink = styled.h3`
-    margin-bottom:20px;
+export const HomeLink = styled(Link)`
+    padding:20px 0px;
     display:inline-block;
-    fontStyle:normal;
+    fontStyle:24px;
     font-family: 'Rajdhani', sans-serif;
     color:#5384ac;
     &:hover{
@@ -92,11 +92,38 @@ export const HomeLink = styled.h3`
     }
 `
 
+export const ProjectList = styled.li`
+    position: relative;
+    padding-left: 2rem;
+    line-height: 1.5;
+    margin-bottom:1rem;
+    &:before{
+        color:#5384ac;
+        width:20px;
+        height:20px;
+        top:0;
+        left:0;
+        position:absolute;
+        content: '\f058';
+        font-family: "FontAwesome";
+    }
+`
+
 export const CustomContainer = styled.div`
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
     padding-bottom: 0px;
-    padding-top: 20px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-bottom: -20px;
+    
+`
+
+export const BodyContainer = styled.div`
+    margin: 0 auto;
+    max-width: auto;
+    padding-bottom: 0px;
+    
     margin-bottom: -20px;
     border-top: 6px solid #5384ac;
 `
@@ -109,15 +136,21 @@ export const Line =styled.div`
     position:relative;
 `
 export const AboutContainer= styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    
+
+  @media (max-width: 700px) {
+    grid-template-columns: 
+  }
 `
 
 export const AboutTextSection = styled.div`
-    flex: 2;
+    
 `
 
 export const AboutImageSection = styled.div`
-    flex: 1;
+    
 `
 export const H1 = styled.h1`
     font-family: 'Rajdhani', sans-serif;
@@ -125,6 +158,7 @@ export const H1 = styled.h1`
 `
 
 export const H2 = styled.h2`
+    color:#5384ac;
     font-family: 'Rajdhani', sans-serif;
 
 `
@@ -144,10 +178,19 @@ export const H3 = styled.h3`
     color:hsla(0, 0%, 0%, .8);
     
 `
+export const BlogPostContainer = styled.div`
+    padding: 10px;
+    
+`
 
 export const BlogLink =styled(Link)`
     text-decoration:none;
     font-family: 'Rajdhani', sans-serif;
+    
+`
+export const Article = styled.article`
+    border-bottom: 1px solid #e6e5e6;
+    padding: 5px;
 `
 export const FooterDiv =styled.div`
     
@@ -156,9 +199,20 @@ export const FooterDiv =styled.div`
 
 export const Date = styled.h6`
     font-family: 'Poor Story', cursive;
-    margin-top: -25px;
     color:hsla(0, 0%, 0%, .8);
     font-weight: normal;
+    margin-bottom: 1rem;
+`
+export const Author = styled.h6`
+    margin-bottom: 1rem;
+    color: hsla(0, 0%, 0%, .8)
+`
+
+export const PostToolbar =styled.div`
+  display: grid;
+  grid-template-columns: 200px 150px ;
+  grid-gap:10px;
+  margin-top: 5px;
 `
 
 export const Excerpt = styled.p`
@@ -168,6 +222,7 @@ export const Excerpt = styled.p`
 export const BlogHeader = styled.h3`
     font-family: 'Rajdhani', sans-serif;
     color:hsla(0, 0%, 0%, .8);
+    margin-bottom: .5rem;
     &:hover{
         color:#2F56B0;
     }
@@ -176,28 +231,36 @@ export const BookmarkLink = styled.a`
     text-decoration: underline;
     text-underline-position: under;
     color: #222;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rajdhani', sans-serif;
 
     &:hover{
         text-decoration: none;
     }
 `
 
-export const BookmarkHeader = styled.header`
+export const BookmarkHeader = styled.div`
     text-align: center;
+    font-family: 'Rajdhani', sans-serif;
 `
 
-export const BookmarkSubHeader = styled.h3`
+export const BookmarkTitle = styled.h1`
+    padding:0px;
+    margin-bottom:10px;
+    font-family: 'Rajdhani', sans-serif;
+`
+
+export const BookmarkSubHeader = styled.h4`
     color:grey;
+    font-family: 'Rajdhani', sans-serif;
 `
 
 export const SourceLink = styled.a`
-    text-decoration: underline;
+    text-decoration: none;
     color: grey;
     font-style: italic;
     font-weight: bold;
     &:hover{
-        text-decoration: none;
+        color: #595959;
     }
 `
 
