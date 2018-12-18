@@ -10,12 +10,6 @@ module.exports = {
   plugins: [
   'gatsby-plugin-react-helmet',
   `gatsby-transformer-remark`,
-  {
-    resolve: 'gatsby-plugin-page-transitions',
-    options: {
-      transitionTime: 500
-    }
-  },
   `gatsby-plugin-styled-components`,
   `gatsby-transformer-sharp`,
   `gatsby-plugin-sharp`,
